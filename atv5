@@ -1,0 +1,43 @@
+numeros = []
+soma_positivos = 0
+while True:
+    entrada = input("Digite um número (ou 'fim' para encerrar): ")
+
+    if entrada == "fim":
+        break
+
+    numero = int(entrada)
+
+    if numero == 0:
+        print("Número 0 digitado. Encerrando o programa.")
+        break
+
+    numeros.append(numero)
+
+    if numero < 0:
+        continue
+
+    soma_positivos += numero
+
+print(f"\nNúmeros digitados: {numeros}")
+print(f"Soma dos números positivos: {soma_positivos}")
+
+pares = 0
+impares = 0
+for n in numeros:
+    if n % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+
+print(f"Quantidade de números pares: {pares}")
+print(f"Quantidade de números ímpares: {impares}")
+
+if len(numeros) > 0:
+    media = sum(numeros) / len(numeros)
+    print(f"Média dos números: {media:.2f}")
+
+print("Números em ordem decrescente:")
+for i in range(len(numeros) - 1, -1, -1):
+    print(numeros[i], end=" ")
+print()
