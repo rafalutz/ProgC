@@ -1,0 +1,5 @@
+frutas = ["maçã", "banana", "laranja", "uva", "manga"]
+
+print(*frutas, sep=" - ", end="\n")
+
+print(*frutas, sep=", ", end=" | Fim da lista de frutas!\n")
